@@ -1,0 +1,26 @@
+[package]
+name = "xkcdbot-rs"
+version = "0.1.0"
+authors = ["Mason Ginter <mason@dagint.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
+xkcd_utils = {path = "xkcd_utils", version = "0.1.0"}
+
+# General Dependencies
+tokio = {version = "1.2.0", features = ["rt-multi-thread", "macros"]}
+async-trait = {version = "0.1.42", optional = true}
+
+# Bot dependencies
+serenity = {version = "0.10.2", optional = true}
+
+[features]
+discord = ["serenity", "async-trait"]
+
+
+[[bin]]
+name = "bot"
+feature = ["discord"]
