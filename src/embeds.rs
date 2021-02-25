@@ -1,4 +1,3 @@
-#[cfg(feature = "discord")]
 use serenity::builder::CreateEmbed;
 
 use xkcd_utils::{comic::Comic, explain::ExplainXKCD, xkcd_regex::MarkdownConverter};

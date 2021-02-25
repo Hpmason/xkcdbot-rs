@@ -1,4 +1,3 @@
-#[cfg(feature = "discord")]
 use serenity::{
     async_trait,
     client::{Context, EventHandler},
