@@ -23,6 +23,8 @@ $Env:TOKEN_NAME="TOKEN_KEY"
 export TOKEN_NAME="TOKEN_KEY"
 ```
 #### XKCD_BOT_TOK
+This token is required in order for the program to communicate with discord via a bot.
+
 You can get this token from https://discord.com/developers/applications.
 Steps are:
 1. Create a discord app
@@ -34,6 +36,8 @@ Steps are:
     - In order to add the bot to your disord server, open this link and discord will walk you through adding the bot
 
 #### GOOGLE_SEARCH_KEY
+This token is required to search for xkcd comics from key words. The token is not used by this repo, but by the xkcd-utils repo (see https://github.com/Hpmason/xkcd-utils/blob/master/src/search.rs).
+
 You can get a google API key by following: https://cloud.google.com/docs/authentication/api-keys
 
 To give it the proper permissions, enable this api: https://console.cloud.google.com/apis/library/customsearch.googleapis.com
