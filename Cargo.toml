@@ -12,15 +12,7 @@ xkcd_utils = {git = "https://github.com/Hpmason/xkcd-utils.git", version = "0.1.
 
 # General Dependencies
 tokio = {version = "1.2.0", features = ["rt-multi-thread", "macros"]}
-async-trait = {version = "0.1.42", optional = true}
+async-trait = "0.1.42"
 
 # Bot dependencies
-serenity = {version = "0.10.2", optional = true}
-
-[features]
-discord = ["serenity", "async-trait"]
-
-
-[[bin]]
-name = "bot"
-feature = ["discord"]
+serenity = "0.10.2"
