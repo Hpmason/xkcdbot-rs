@@ -12,16 +12,18 @@ xkcdbot-rs supports the following commands:
 xkcdbot-rs requires 2 environmental variables tokens/keys.
 - `XKCD_BOT_TOK`
 - `GOOGLE_SEARCH_KEY`
+If you don't know how to get these keys, look below
+### Running
+```
+docker build -t xkcdbot-rs .
+```
 
-#### Setting environment variables
-##### Windows Powershell
 ```
-$Env:TOKEN_NAME="TOKEN_KEY"
+docker run --rm -e XKCD_BOT_TOK="your_bot_token_here" -e GOOGLE_SEARCH_KEY="your_api_key_here" --name xkcd-bot xkcdbot-rs
 ```
-##### Linux/Unix/Mac
-```
-export TOKEN_NAME="TOKEN_KEY"
-```
+
+## Obtaining keys
+
 #### XKCD_BOT_TOK
 This token is required in order for the program to communicate with discord via a bot.
 
@@ -44,13 +46,5 @@ To give it the proper permissions, enable this api: https://console.cloud.google
 
 And then make sure to restrict the API key to only be able to use the custom search API from the Credentials dashboard https://console.cloud.google.com/apis/credentials
 
-### Instalation
-You can run the bot 3 ways:
-- Install via `cargo install --git https://github.com/Hpmason/xkcdbot-rs` and then run with `xkcdbot-rs` command
-- Download release executable
-- Build from source
-  - git clone this repo
-  - run `cargo run` or build then run with `cargo build`
-
-# Contributing
- I'm always open to pull requests and suggestions
+## Contributing
+I'm always open to pull requests and suggestions
