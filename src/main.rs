@@ -14,7 +14,7 @@ mod embeds;
 async fn main() {
     // Configure the client with your Discord bot token in the environment.
     let token = env::var("XKCD_BOT_TOK")
-        .expect("Expected a token in the environment");
+        .expect("Expected a token 'XKCD_BOT_TOK' in the environment");
 
     let framework = StandardFramework::new()
         .configure(|c| c.prefix("!"))
