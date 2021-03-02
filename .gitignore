@@ -1,3 +1,4 @@
 /target
 /xkcd_utils/target
 cargo.lock
+workspace.code-workspace
