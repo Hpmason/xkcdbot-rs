@@ -16,11 +16,11 @@ If you don't know how to get these keys, look below
 ### Running
 Build bot image
 ```
-docker build -t xkcdbot-rs .
+docker build -t xkcdbot .
 ```
 Run the bot image
 ```
-docker run --rm --env-file .env --name xkcd-bot xkcdbot-rs
+docker run --rm --env-file .env --name xkcdbot xkcdbot
 ```
 
 ## Obtaining keys
