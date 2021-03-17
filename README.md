@@ -14,12 +14,13 @@ xkcdbot-rs requires 2 environmental variables tokens/keys.
 - `GOOGLE_SEARCH_KEY`
 If you don't know how to get these keys, look below
 ### Running
+Build bot image
 ```
 docker build -t xkcdbot-rs .
 ```
-
+Run the bot image
 ```
-docker run --rm -e XKCD_BOT_TOK="your_bot_token_here" -e GOOGLE_SEARCH_KEY="your_api_key_here" --name xkcd-bot xkcdbot-rs
+docker run --rm --env-file .env --name xkcd-bot xkcdbot-rs
 ```
 
 ## Obtaining keys
