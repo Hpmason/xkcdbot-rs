@@ -1,14 +1,15 @@
-ARG APP=xkcdbot-rs
+
 FROM rust:latest AS builder
 
+ARG APP=xkcdbot-rs
 WORKDIR /usr/src/${APP}
 COPY . .
-
-RUN cargo install --path .
+RUN cargo build --release
 
 FROM debian:buster-slim 
+ARG APP=xkcdbot-rs
 RUN apt-get update \ 
     && apt-get install -y ca-certificates \ 
     && rm -rf /var/lib/apt/lists/*
-COPY --from=builder /usr/local/cargo/bin/${APP} /usr/local/bin/${APP}
+COPY --from=builder /usr/src/${APP}/target/release/${APP} /usr/local/bin/${APP}
 CMD ["xkcdbot-rs"]
