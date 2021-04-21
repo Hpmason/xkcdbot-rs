@@ -33,7 +33,7 @@ async fn test(ctx: &Context, msg: &Message) -> CommandResult {
 async fn get_comic(mut args: Args) -> Result<Comic, XKCDError> {
     let home = Comic::get_home().await?;
     // Get home page if no page specified
-    if args.len() == 0 {
+    if args.is_empty() {
         return Ok(home);
     }
     // If number provided as arg, search to page id
@@ -116,7 +116,7 @@ async fn random(ctx: &Context, msg: &Message) -> CommandResult {
     Ok(())
 }
 async fn get_explain(mut args: Args) -> Result<ExplainXKCD, XKCDError>{
-    if args.len() == 0 {
+    if args.is_empty() {
         return ExplainXKCD::get_home().await;
     }
     else {

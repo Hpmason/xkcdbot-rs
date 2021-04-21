@@ -18,7 +18,7 @@ impl Embeddable for Comic {
         // e.field("Page ID", &self.num, true);
         // e.field("Permalink", &format!("http://xkcd.com/{}", self.num), true);
         e.url(&format!("http://xkcd.com/{}", self.num));
-        if &self.transcript != "" {
+        if self.transcript.is_empty() {
             e.description(format!("__**Transcript**__:\n{}", 
                 MarkdownConverter::from_xkcd(&self.transcript).discord()
             ));
@@ -51,8 +51,8 @@ impl Embeddable for ExplainXKCD {
             
             let mut i = 0;
             let mut s = String::new();
-            for lin in markdown.split("\n") {
-                if lin.len() + &s.len() + 2 < 1024 {
+            for lin in markdown.split('\n') {
+                if lin.len() + s.len() + 2 < 1024 {
                     s += "\n";
                     s += lin;
                 }
