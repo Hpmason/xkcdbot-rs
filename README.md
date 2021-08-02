@@ -1,5 +1,10 @@
 # xkcdbot-rs
 Discord bot for xkcd.com comics
+
+Docker image can be found on my [GitHub Container Registry](https://github.com/Hpmason/mcbot-rs/pkgs/container/xkcdbot-rs)
+```
+docker pull ghcr.io/hpmason/mcbot-rs:latest
+```
 ## Usage
 xkcdbot-rs supports the following commands:
 - !explain [comic_num]
@@ -14,7 +19,7 @@ xkcdbot-rs requires 2 environmental variables tokens/keys.
 - `GOOGLE_SEARCH_KEY`
 If you don't know how to get these keys, look below
 ### Running
-Build bot image
+If you want to build the image manually, you can do so by running the following commands:
 ```
 docker build -t xkcdbot .
 ```
