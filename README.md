@@ -3,7 +3,7 @@ Discord bot for xkcd.com comics
 
 Docker image can be found on my [GitHub Container Registry](https://github.com/Hpmason/mcbot-rs/pkgs/container/xkcdbot-rs)
 ```
-docker pull ghcr.io/hpmason/mcbot-rs:latest
+docker pull ghcr.io/hpmason/xkcdbot-rs:latest
 ```
 ## Usage
 xkcdbot-rs supports the following commands:
