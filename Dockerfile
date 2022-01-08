@@ -12,4 +12,4 @@ RUN apt-get update \
     && apt-get install -y ca-certificates \ 
     && rm -rf /var/lib/apt/lists/*
 COPY --from=builder /usr/src/${APP}/target/release/${APP} /usr/local/bin/${APP}
-CMD ${APP}
+CMD "xkcdbot-rs"
